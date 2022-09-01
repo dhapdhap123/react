@@ -1,22 +1,25 @@
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route
-} from "react-router-dom";
-import Home from "./routes/Home";
-import Detail from "C:/Users/dhapd/OneDrive/바탕 화면/reactprac/src/routes/Detail.js";
-import Hello from "./routes/Hello";
+import Daylist from "./components/Daylist";
+import Header from "./components/Header";
+import Day from "./components/Day";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import EmptyPage from "./components/EmptyPage";
 
 function App() {
-  return <Router>
-    <Routes>
-      <Route path="/hello" element={<Hello />} />
-      <Route path="/movie/:id" element={<Detail />} />
-      <Route path="/" element={<Home />} />
-    </Routes>
-  </Router>
+  return (
+    <BrowserRouter>
+    <div className="App">
+      <Header />
+      <Routes>
+        <Route exact path="/" element={<Daylist />}>
+        </Route>
+        <Route path="/day/:day" element={<Day />}>
+        </Route>
+        <Route path="*" element={<EmptyPage />}>
+        </Route>
+      </Routes>
+    </div>
+    </BrowserRouter>
+  );
 }
-
-
 
 export default App;
