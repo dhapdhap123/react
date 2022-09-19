@@ -1,7 +1,6 @@
 import { useNavigate, useParams } from "react-router-dom";
 import Word from "./Word";
 import useFetch from "../hooks/useFetch";
-import { useState } from "react";
 
 export default function Day(){
     const { day } = useParams();
@@ -19,21 +18,7 @@ export default function Day(){
             navigate(`/day/${Number(day) + 1}`)
         }
     }
-    const onDeleteClick = () => {
-        if(window.confirm("날짜를 삭제하시겠습니까?")){
-            fetch(`http://localhost:3001/days/${day}`, {
-                method : 'DELETE',
-            }).then(res => {
-                if(res.ok){
-                    
-                    console.log("삭제되었다!")
 
-
-                    navigate("/")
-                }
-            });
-        }
-    }
     return (
     <>
         <div>
@@ -52,7 +37,6 @@ export default function Day(){
                 justifyContent: 'space-between'
             }}>
                 <button onClick={onLeftClick}>◁</button>
-                <button onClick={onDeleteClick} className="btn_del">X</button>
                 <button onClick={onRightClick}>▷</button>
             </div>
         </div>

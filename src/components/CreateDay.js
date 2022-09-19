@@ -16,7 +16,7 @@ function CreateDay(){
                     'Content-Type' : 'application/json',
                 },
                 body : JSON.stringify({
-                    day: newDate,
+                    day: newDate
                 }),
             }).then(res => {
                 if (res.ok) {

@@ -12,6 +12,9 @@ export default function Headers(){
                 <Link to="/create_day" className="link">
                     Day 추가
                 </Link>
+                <Link to="/delete_day" className="link">
+                    Day 삭제
+                </Link>
             </div>
         </div>
     )

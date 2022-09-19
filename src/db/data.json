@@ -1,24 +1,17 @@
 {
   "days": [
     {
-      "id": 1,
-      "day": 1
+      "day": 1,
+      "id": 1
     }
   ],
   "words": [
     {
       "day": 1,
-      "eng": "computer",
-      "kor": "컴퓨터",
+      "eng": "ㅁㄴㅇㄹ",
+      "kor": "ㅁㄴㅇㄹ",
       "isDone": false,
       "id": 1
-    },
-    {
-      "day": 2,
-      "eng": "computer",
-      "kor": "컴퓨터",
-      "isDone": false,
-      "id": 2
     }
   ]
 }
